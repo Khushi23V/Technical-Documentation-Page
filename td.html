@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><h2 id="heading">SQL DOCUMENTATION</h2></header>
+      <ul>
+          <li><a href="#SQL_Basics" class="nav-link">SQL Basics</a></li>
+          <li><a href="#Create_Database" class="nav-link">Create Database</a></li>
+          <li><a href="#Tables_In_SQL" class="nav-link">Tables In SQL</a></li>
+          <li><a href="#SQL_Queries" class="nav-link">SQL Queries</a></li>
+          <li><a href="#SQL_Operators" class="nav-link"> SQL Operators</a></li>
+          <li><a href="#SQL_Aggregate_Functions" class="nav-link"> SQL Aggregate Functions</a></li>
+          <li><a href="#SQL_Data_Constraints" class="nav-link"> SQL Data Constraints</a></li>
+          <li><a href="#SQL_Views" class="nav-link">SQL Views</a></li>
+        </ul>
+    </nav>
+     <main id="main-doc">
+    <section class="main-section" role="region" aria-labelledby="SQL_Basics" id="SQL_Basics">
+      <header id="SQL_Basics"><h2>SQL Basics</h2></header>
+      <p>Structured Query Language (SQL) is a specialized programming language for managing relational database data. It allows users to store, manipulate, and retrieve data efficiently in databases like MySQL, SQL Server, Oracle, and more.</p>
+      <p>In common usage, SQL encompasses DDL and DML commands for CREATE, UPDATE, MODIFY, or other operations on database structure.</p>
+      <h3>SQL History</h3>
+      <ul>
+        <li class="x">SQL was invented in 1970s and was first commercially distributed by Oracle.</li>
+        <li class="x">The original name was given by IBM as Structured English Query Language, abbreviated by the acronym SEQUEL.</li>
+        </ul>
+    </section>
+    <section class="main-section" role="region" aria-labelledby="Create_Database" id="Create_Database">
+      <header id="Create_Database"><h2>Create Database</h2></header>
+      <p>The CREATE DATABASE query in SQL is used to create a new database in the database management system. It is also used in MySQL and other relational database management systems (RDBMS) to create databases.</p>
+      <h3>Syntax</h3>
+      <p>The syntax to use the CREATE DATABASE command in SQL is:</p>
+      <code>CREATE DATABASE database_name;</code>
+    </section>
+    <section class="main-section" role="region" aria-labelledby="Tables_In_SQL" id="Tables_In_SQL">
+      <header id="Tables_In_SQL"><h2>Tables In SQL</h2></header>
+      <h3>Create Table</h3>
+      <p>SQL CREATE TABLE Statement is used to create a new table in a database. Users can define the table structure by specifying the column’s name and data type in the CREATE TABLE command.</p>
+      <h4>Syntax</h4>
+      <p>To create a table in SQL, use this CREATE TABLE syntax:</p>
+      <code>CREATE table table_name<br>
+(
+Column1 datatype (size),<br>
+column2 datatype (size),<br>
+.<br>
+.<br>
+columnN datatype(size)<br>
+);</code>
+<h3>Drop Table</h3>
+<p>DROP TABLE in SQL means that all of the table’s data, structure, constraints, permissions, etc. will be removed from the database.</p>
+<h4>Syntax</h4>
+<code>DROP TABLE table_name;</code>
+    </section>
+    <section class="main-section" role="region" aria-labelledby="SQL_Queries" id="SQL_Queries">
+      <header id="SQL_Queries"><h2>SQL Queries</h2></header>
+      <ul>
+        <li><h3>SQL SELECT Query</h3>
+        <p>The SELECT statement in SQL is used to fetch or retrieve data from a database. It allows users to access the data and retrieve specific data based on specific conditions.</p>
+        <code>SELECT column1,column2…. FROM table_name ;</code></li>
+        <li><h3>SQL INSERT INTO Statement</h3>
+        <p>MS SQL Server INSERT statement is used to add/insert new data into the table. It is a fundamental command for data insertion and is used to insert new data into tables.</p>
+        <code>INSERT INTO table_name <br>
+VALUES (value1, value2, value); </code></li>
+        <li><h3>SQL UPDATE Statement</h3>
+        <p>The UPDATE statement in SQL is used to update the data of an existing table in the database. We can update single columns as well as multiple columns using the UPDATE statement as per our requirement.</p>
+        <code>UPDATE table_name SET column1 = value1, column2 = value2,…<br> 
+WHERE condition;</code></li>
+        <li><h3>SQL DELETE Statement</h3>
+        <p>SQL DELETE is a basic SQL operation used to delete data in a database. SQL DELETE is an important part of database management DELETE can be used to selectively remove records from a database table based on certain conditions.</p><code>DELETE FROM table_name<br>
+WHERE some_condition;
+</code></li></ul>
+    </section>
+    <section class="main-section" role="region" aria-labelledby="SQL_Operators" id="SQL_Operators">
+      <header id="SQL_Operators"><h2>SQL Operators</h2></header>
+      <ul>
+        <li><h3>SQL AND and OR Operators</h3><p>SQL AND and OR operators are used for data filtering and getting precise results based on conditions. They are used with the WHERE clause and are also called conjunctive operators.</p><code>SELECT * FROM table_name WHERE condition1 AND condition2 AND …<br>conditionN;</code><code>SELECT * FROM table_name WHERE condition1 OR condition2 OR…<br> conditionN;</code></li>
+        <li><h3>SQL LIKE Operator</h3><p>SQL LIKE operator is used with the WHERE clause to search for a specified pattern in a column. LIKE operator finds and returns the rows that fit in the given pattern.</p><code>SELECT column1, column2, ...<br>
+FROM table_name<br>
+WHERE columnN LIKE pattern;</code></li>
+        <li><h3>SQL IN Operator</h3><p>The SQL IN operator filters data based on a list of specific values. In general, we can only use one condition in the WHEN clause, but the IN operator allows us to specify multiple values.</p><code>SELECT column_name FROM table_name<br>
+WHERE condition IN (condition_value1, condition_value2 …..);
+</code></li>
+      </ul>
+    </section>
+    <section class="main-section" role="region" aria-labelledby="SQL_Aggregate_Functions" id="SQL_Aggregate_Functions">
+      <header id="SQL_Aggregate_Functions"><h2>SQL Aggregate Functions</h2></header>
+      <p>SQL Aggregate functions are functions where the values of multiple rows are grouped as input on certain criteria to form a single value result of more significant meaning.</p>
+      <p>It is used to summarize data, by combining multiple values to form a single result.</p>
+      <p>SQL Aggregate functions are mostly used with the GROUP BY clause of the SELECT statement.</p>
+    </section>
+    <section class="main-section" role="region" aria-labelledby="SQL Data_Constraints" id="SQL_Data_Constraints">
+      <header id="SQL Data_Constraints"><h2>SQL Data Constraints</h2></header>
+      <ul>
+        <li><h3>SQL NOT NULL Constraint</h3><p>The SQL NOT NULL forces particular values or records should not to hold a null value. It is somewhat similar to the primary key condition as the primary key can’t have null values in the table although both are completely different things.</p></li>
+        <li><h3>SQL UNIQUE Constraint</h3><p>SQL Constraints Unique constraints in SQL is used to check whether the sub-query has duplicate tuples in its result. It returns a boolean value indicating the presence/absence of duplicate tuples. Unique constraint returns true only if the subquery has no duplicate tuples, else it returns false.</p></li>
+        <li><h3>SQL PRIMARY KEY Constraint</h3><p>SQL PRIMARY KEY constraint uniquely identifies each record in a database table.</p></li>
+      </ul>
+    </section>
+    <section class="main-section" role="region" aria-labelledby="SQL_Views" id="SQL_Views">
+      <header id="SQL_Views"><h2>SQL Views</h2></header>
+      <p>Views in SQL are a kind of virtual table. A view also has rows and columns like tables, but a view doesn’t store data on the disk like a table. View defines a customized query that retrieves data from one or more tables, and represents the data as if it was coming from a single source.</p>
+      <p>We can create a view by selecting fields from one or more tables present in the database. A View can either have all the rows of a table or specific rows based on certain conditions.</p>
+    </section>
+  </main>
+  </body>
+</html>
